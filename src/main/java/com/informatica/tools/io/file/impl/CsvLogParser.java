@@ -18,6 +18,7 @@ import com.informatica.tools.sdk.util.exception.ParserException;
 import com.opencsv.CSVWriter;
 
 public class CsvLogParser implements ILogParser {
+	
 	private final String csvFilePath;
 	private LogType logType;
 	
