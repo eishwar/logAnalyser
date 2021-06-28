@@ -22,6 +22,7 @@ public class CsvLogParser implements ILogParser {
 	private LogType logType;
 	
 	private List<LogEntity> logs;
+	
 	public CsvLogParser(String csvFilePath, LogType logType) {
 		this.csvFilePath = csvFilePath;
 		this.logType = logType;
