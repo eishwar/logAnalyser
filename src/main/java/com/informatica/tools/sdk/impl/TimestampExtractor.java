@@ -10,7 +10,7 @@ public class TimestampExtractor implements IHandler{
 
 	@Override
 	public void process(ParserContext context) throws ParserException {
-		//Date date=context.getLogLine().split(null);
+		// Date date=context.getLogLine().split(null);
 		
 	}
 
