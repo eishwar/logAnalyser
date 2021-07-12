@@ -25,6 +25,7 @@ public class TaskOrchestrator implements IOrchestrator {
 	
 	@Override
 	public void process(ParserContext context) throws ParserException {
+
 		if (context.getInputFile() == null) {
 			log.error("Input file is not available");
 			throw new ParserException(ParserErrorCodes.PARSER_002);

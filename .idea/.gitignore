@@ -69,3 +69,5 @@ build
 # VisualStudio Code files
 **/.vscode/*
 package-lock.json
+# Default ignored files
+/workspace.xml
