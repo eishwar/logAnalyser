@@ -40,7 +40,7 @@ public class TaskOrchestrator implements IOrchestrator {
 			context.setLogLine(line);
 			for(IHandler handler: handlers) {
 				handler.process(context);
-			
+			}
 			
 			linenumber++;
 			processedList.add(context.getLogEntity());
