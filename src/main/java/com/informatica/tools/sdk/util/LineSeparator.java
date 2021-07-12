@@ -58,7 +58,7 @@ public class LineSeparator {
 	
 	private boolean containsTimestamp(String line) {
 		
-		if(line.matches("^[0-3][0-9]-[A-Z][a-z][a-z]-[1-2][0-9][0-9][0-9]\s[0-9][0-9]:[0-9][0-9]:[0-9][0-9].*"))
+		if(line.matches("^[0-3][0-9]-[A-Z][a-z][a-z]-[1-2][0-9][0-9][0-9]\\s[0-9][0-9]:[0-9][0-9]:[0-9][0-9].*"))
 			return true;
 		else
 			return false;		
