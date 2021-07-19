@@ -24,8 +24,8 @@ public class TimestampExtractor implements IHandler{
 	}
 	
 	Date timestampExtractor(ParserContext context) throws ParserException{
-		
-		String date = context.getLogLine().substring(0, 40);
+		 
+		String date = context.getLogLine().substring(0, 60);
 		
 		try {
 			return new SimpleDateFormat(context.getLogType().getDateFormat()).parse(date);

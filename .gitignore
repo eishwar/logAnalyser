@@ -54,8 +54,6 @@ build
 # Internal build dirs, shouldn't happen
 **/out
 *.iml
-**/logs
-*.log
 *.hprof
 
 ###############################################################################

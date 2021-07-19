@@ -30,7 +30,7 @@ public class TaskOrchestrator implements IOrchestrator {
 			log.error("Input file is not available");
 			throw new ParserException(ParserErrorCodes.PARSER_002);
 		}
-		
+		            
 		LineSeparator lineSeparator = new LineSeparator(context.getInputFile());
 		List<String> logList = lineSeparator.getLogList();
 		List<LogEntity> processedList = new ArrayList<LogEntity>(); 

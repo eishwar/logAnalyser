@@ -31,7 +31,7 @@ public class CsvLogParser implements ILogParser {
 	}
 	public void process() throws ParserException {
 		 
-		File logFile= new File(this.csvFilePath);
+		File logFile = new File(ClassLoader.getSystemResource(csvFilePath).getFile());
 		IOrchestrator orchestrator = new TaskOrchestrator();		
 		orchestrator.addHandler(new LogExtractor());
 		orchestrator.addHandler(new LogLevelChecker());
@@ -40,7 +40,7 @@ public class CsvLogParser implements ILogParser {
 				.logType(logType).build();
 		orchestrator.process(context);
 		CsvWriter csvWriter = new CsvWriter();
-		csvWriter.writeCSVFile(context.getLogEntities(), context.getInputFile().getAbsolutePath());
+		csvWriter.writeCSVFile(context.getLogEntities(), ClassLoader.getSystemResource(csvFilePath).getFile());
 		this.logs = context.getLogEntities();
 	}
 
