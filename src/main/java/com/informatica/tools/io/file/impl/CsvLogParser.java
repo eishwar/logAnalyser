@@ -13,6 +13,7 @@ import com.informatica.tools.sdk.impl.CsvWriter;
 import com.informatica.tools.sdk.impl.LogExtractor;
 import com.informatica.tools.sdk.impl.LogLevelChecker;
 import com.informatica.tools.sdk.impl.TaskOrchestrator;
+import com.informatica.tools.sdk.impl.TimestampExtractor;
 import com.informatica.tools.sdk.util.LogType;
 import com.informatica.tools.sdk.util.exception.ParserException;
 import com.opencsv.CSVWriter;
@@ -31,9 +32,10 @@ public class CsvLogParser implements ILogParser {
 	public void process() throws ParserException {
 		 
 		File logFile= new File(this.csvFilePath);
-		IOrchestrator orchestrator = new TaskOrchestrator();
-		orchestrator.addHandler(new LogLevelChecker());
+		IOrchestrator orchestrator = new TaskOrchestrator();		
 		orchestrator.addHandler(new LogExtractor());
+		orchestrator.addHandler(new LogLevelChecker());
+		orchestrator.addHandler(new TimestampExtractor());
 		ParserContext context = ParserContext.builder().inputFile(logFile)
 				.logType(logType).build();
 		orchestrator.process(context);

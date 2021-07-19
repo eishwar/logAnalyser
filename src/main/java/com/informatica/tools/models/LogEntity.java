@@ -1,6 +1,6 @@
 package com.informatica.tools.models;
 
-import java.sql.Date;
+import java.util.Date;
 
 import lombok.Builder;
 import lombok.Getter;

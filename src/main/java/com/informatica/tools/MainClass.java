@@ -12,10 +12,10 @@ import com.informatica.tools.sdk.util.LogType;
 import com.opencsv.CSVWriter;
 public class MainClass {
 	
-	public static final String logFile = "C:\\Program Files\\Informatica Cloud Secure Agent\\apps\\process-engine\\logs\\catalina.2021-01-11.log";
+	public static final String logFile = "C:\\Program Files\\Informatica Cloud Secure Agent\\apps\\process-engine\\logs\\catalina.2021-02-28.log";
 	
 	public static void main (String...args) throws Exception {
-		 ILogParser parser = new CsvLogParser(logFile, LogType.AGENT_CORE_LOG);
+		 ILogParser parser = new CsvLogParser(logFile, LogType.CATALINA_LOG);
 		 parser.process();
 		 parser.getLogs();
 	}

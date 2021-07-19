@@ -34,7 +34,7 @@ public class CsvWriter {
 			CSVWriter CSVWriter = new CSVWriter(logFilewriter);
 	    	for (LogEntity logEntity : entities) {
 	    	
-	    		String[] csvLine = {logEntity.getLineNumber(), logEntity.getErrorLevel(), logEntity.getLogStatement(), logEntity.getTimestamp().toString()};
+	    		String[] csvLine = {logEntity.getLineNumber(), logEntity.getErrorLevel(), logEntity.getTimestamp().toString(), logEntity.getLogStatement()};
 	    		CSVWriter.writeNext(csvLine);
 	    	}
 	    	CSVWriter.close();

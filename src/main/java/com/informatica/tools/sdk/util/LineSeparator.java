@@ -23,7 +23,7 @@ public class LineSeparator {
 	
 	
 	public List<String> getLogList() throws ParserException {
-        
+       // log.info("Processing line {}", );
 		List<String> logLines = new ArrayList<String>();
 		
 		try{
